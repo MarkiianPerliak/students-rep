@@ -1,0 +1,25 @@
+{
+  "name": "students-rep",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://markiianperliak.github.io/students-rep/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --no-cache --public-url /students-rep/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "server": "npx json-server db.json"
+  },
+  "author": "Markiian",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "json-server": "^1.0.0-beta.3",
+    "node": "^22.18.0",
+    "parcel": "^2.15.4"
+  },
+  "devDependencies": {
+    "stream-http": "^3.2.0"
+  }
+}
