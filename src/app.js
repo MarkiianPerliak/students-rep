@@ -4,10 +4,27 @@ const getStudentsBtn = document.getElementById("get-students-btn")
 
 // Функція для відображення студентів у таблиці
 function renderStudents(students) {
+    const thbody = document.querySelector(".thbody")
     students.forEach(student => {
+        let text = "";
+        if (student.isEnrolled === true) {
+            text = "Online"
+        } else {
+            text = "Offline"
+        }
         const htmlCode = `
-        
+    <tr>
+      <td>${student.id}</td>
+      <td>${student.name}</td>
+      <td>${student.age}</td>
+      <td>${student.course}</td>
+      <td>${student.skills}</td>
+      <td>${student.email}</td>
+      <td>${text}</td>
+      <td><button class="delete">Delete</button><button class="update">Update</button></td>
+    </tr>        
         `;
+        thbody.insertAdjacentHTML("afterbegin", htmlCode)
     })
 }
 
@@ -33,7 +50,30 @@ headers: {
     fetch("http://localhost:3000/students", options)
 }
 
-
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const name = event.target.elements.name.value;
+    const age = event.target.elements.age.value;
+    const course = event.target.elements.course.value;
+    const skills = event.target.elements.skills.value;
+    const email = event.target.elements.email.value;
+    const enrolled = event.target.elements.enrolled.value;
+    let enrolledchecked = "";
+    if (enrolled === "on") {
+        enrolledchecked = true
+    } else {
+        enrolledchecked = false
+    }
+    const object = {
+        "name": `${name}`,
+        "age": Number(age),
+        "course": `${course}`,
+        "skills": [``, ``],
+        "email": `${email}`,
+        "isEnrolled": enrolledchecked
+    }
+    addStudent(object)
+})
 
 // Функція для оновлення студента
 

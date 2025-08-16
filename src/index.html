@@ -50,7 +50,7 @@
 
             </thead>
 
-            <tbody>
+            <tbody class="thbody">
 
                 <!-- Динамічно заповнено -->
 
@@ -64,17 +64,17 @@
 
         <form id="add-student-form">
 
-            <label>Ім'я: <input type="text" id="name" required></label>
+            <label>Ім'я: <input name="name" type="text" id="name" required></label>
 
-            <label>Вік: <input type="number" id="age" required></label>
+            <label>Вік: <input name="number" type="number" id="age" required></label>
 
-            <label>Курс: <input type="text" id="course" required></label>
+            <label>Курс: <input name="course" type="text" id="course" required></label>
 
-            <label>Навички (через кому): <input type="text" id="skills" required></label>
+            <label>Навички (через кому): <input name="skills" type="text" id="skills" required></label>
 
-            <label>Email: <input type="email" id="email" required></label>
+            <label>Email: <input name="email" type="email" id="email" required></label>
 
-            <label>Записаний: <input type="checkbox" id="isEnrolled"></label>
+            <label>Записаний: <input name="enrolled" type="checkbox" id="isEnrolled"></label>
 
             <button class="submit-btn" type="submit">Додати студента</button>
 
