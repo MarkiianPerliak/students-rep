@@ -63,66 +63,6 @@
       ],
       "email": "mykola.bondarenko@example.com",
       "isEnrolled": true
-    },
-    {
-      "id": "f9b4",
-      "name": "Markiian",
-      "age": 14,
-      "course": "JS",
-      "skills": [
-        "",
-        ""
-      ],
-      "email": "mycoolemail@gmail.com",
-      "isEnrolled": "Online"
-    },
-    {
-      "id": "5177",
-      "name": "Markiian",
-      "age": 12,
-      "course": "JS",
-      "skills": [
-        "",
-        ""
-      ],
-      "email": "mycoolemail@gmail.com",
-      "isEnrolled": "Online"
-    },
-    {
-      "id": "23e0",
-      "name": "Markiian",
-      "age": 14,
-      "course": "JS",
-      "skills": [
-        "",
-        ""
-      ],
-      "email": "mycoolemail@gmail.com",
-      "isEnrolled": "Online"
-    },
-    {
-      "id": "4514",
-      "name": "Markiian",
-      "age": 14,
-      "course": "JS",
-      "skills": [
-        "",
-        ""
-      ],
-      "email": "mycoolemail@gmail.com",
-      "isEnrolled": "true"
-    },
-    {
-      "id": "1595",
-      "name": "Markiian",
-      "age": 14,
-      "course": "JS",
-      "skills": [
-        "",
-        ""
-      ],
-      "email": "mycoolemail@gmail.com",
-      "isEnrolled": true
     }
   ]
 }

@@ -126,3 +126,41 @@ form input {
 
 }
 
+.backdrop-styles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-styles {
+  background: white;
+  position: relative;
+  border-radius: 12px;
+  width: 400px;
+padding: 10px;
+  height: max-content;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      font-family: "Fredoka";
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal-styles {
+    background-color: transparent;
+    border-radius: 17px;
+    position: absolute;
+    right: 7;
+    font-size: 15px;
+    top: 7;
+    border: 1px black solid;
+    padding: 7px 11px;
+}
