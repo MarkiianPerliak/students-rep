@@ -731,6 +731,8 @@ function getStudents() {
 }
 getStudentsBtn.addEventListener("click", (event)=>{
     getStudents().then((data)=>data.json()).then((resultdata)=>{
+        const thbody = document.querySelector(".thbody");
+        thbody.innerHTML = "";
         renderStudents(resultdata);
         const deletebtns = document.querySelectorAll(".delete");
         const updatebtns = document.querySelectorAll(".update");
