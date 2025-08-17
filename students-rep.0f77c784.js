@@ -722,7 +722,7 @@ function renderStudents(students) {
       <td><button class="delete">Delete</button><button class="update">Update</button></td>
     </tr>        
         `;
-        thbody.insertAdjacentHTML("afterbegin", htmlCode);
+        thbody.insertAdjacentHTML("beforeend", htmlCode);
     });
 }
 // Функція для отримання всіх студентів
