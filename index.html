@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>CRUD Students</title><link rel=stylesheet href=/students-rep/students-rep.d059bc80.css><body>
+
+    <div class=container>
+
+        <h1>Список студентів</h1>
+
+        <button id=get-students-btn>Отримати студентів</button>
+
+
+
+        <table id=students-table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Ім'я</th>
+
+                    <th>Вік</th>
+
+                    <th>Курс</th>
+
+                    <th>Навички</th>
+
+                    <th>Email</th>
+
+                    <th>Статус</th>
+
+                    <th>Дії</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody class=thbody>
+
+                
+
+            </tbody>
+
+        </table>
+
+
+
+        <h2>Додати нового студента</h2>
+
+        <form id=add-student-form>
+
+            <label>Ім'я: <input name=name id=name required></label>
+
+            <label>Вік: <input name=number type=number id=age required></label>
+
+            <label>Курс: <input name=course id=course required></label>
+
+            <label>Навички (через кому): <input name=skills id=skills required></label>
+
+            <label>Email: <input name=email type=email id=email required></label>
+
+            <label>Записаний: <input name=enrolled type=checkbox id=isEnrolled></label>
+
+            <button class=submit-btn>Додати студента</button>
+
+        </form>
+
+    </div>
+
+    <div class="backdrop-styles backdrop2 hidden">
+        <div class="modal-styles modal2">
+            <button class="close-modal-styles close-modal2">X</button>
+            <form class="input-list modal-form2">
+
+                <div class=flexitem>
+                    <input name=name placeholder=Name class=name>
+                </div>
+
+                <div class=flexitem>
+                        <input name=age placeholder=Age min=0 type=number class=age>
+                </div>
+
+                <div class=flexitem>
+                    <input name=course placeholder=Courses class=course>
+                </div>
+
+                <div class=flexitem>
+                    <input name=skills placeholder=Skills class=skills>
+                </div>
+
+                <div class=flexitem>
+                    <input name=email placeholder=Email class=email>
+                </div>
+
+                <div class=flexitem>
+                    <p>Записаний</p><input name=enrolled type=checkbox>
+                    <button class="datasend-styles datasend2">Update</button>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+    <script type=module src=/students-rep/students-rep.e1bd7d2b.js></script>
+
+
+
