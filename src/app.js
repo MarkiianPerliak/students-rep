@@ -17,26 +17,26 @@ function addStudent(student) {
             "Content-Type": "application/json; charset=UTF-8",
         },
     };
-    fetch("http://localhost:3000/students", options)
+    fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students", options)
 }
 
 // Функція для оновлення студента
 
 function updateAPI(object, id) {
     const options = {
-        method: "PATCH",
+        method: "PUT",
         body: JSON.stringify(object),
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
         },
     };
-    fetch(`http://localhost:3000/students/${id}`, options)
+    fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${id}`, options)
 }
 
 // Функція для видалення студента
 
 function deleteProduct(posthid) {
-    fetch(`http://localhost:3000/students/${posthid}`, { method: "DELETE", })
+    fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${posthid}`, { method: "DELETE", })
 }
 
 // Функція для відображення студентів у таблиці
@@ -67,7 +67,7 @@ function renderStudents(students) {
 
 // Функція для отримання всіх студентів
 function getStudents() {
-    return fetch("http://localhost:3000/students")
+    return fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students")
 }
 
 getStudentsBtn.addEventListener("click", (event) => {
