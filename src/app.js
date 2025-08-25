@@ -9,7 +9,7 @@ const modalForm2 = document.querySelector(".modal-form2");
 
 // Функція для додавання нового студента
 
-function addStudent(student) {
+const addStudent = async (student) => {
     const options = {
         method: "POST",
         body: JSON.stringify(student),
@@ -17,12 +17,16 @@ function addStudent(student) {
             "Content-Type": "application/json; charset=UTF-8",
         },
     };
-    fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students", options)
+    try {
+        return await fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students", options)
+    }catch(error) {
+        return error
+    }
 }
 
 // Функція для оновлення студента
 
-function updateAPI(object, id) {
+const updateAPI = async (object, id) => {
     const options = {
         method: "PUT",
         body: JSON.stringify(object),
@@ -30,13 +34,21 @@ function updateAPI(object, id) {
             "Content-Type": "application/json; charset=UTF-8",
         },
     };
-    fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${id}`, options)
+    try {
+        return await fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${id}`, options)
+    }catch(error) {
+        return error
+    }
 }
 
 // Функція для видалення студента
 
-function deleteProduct(posthid) {
-    fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${posthid}`, { method: "DELETE", })
+const deleteProduct = async (posthid) => {
+    try {
+        return await fetch(`https://68a180f86f8c17b8f5da0043.mockapi.io/students/students/${posthid}`, { method: "DELETE", })
+    }catch(error) {
+        return error
+    }
 }
 
 // Функція для відображення студентів у таблиці
@@ -66,8 +78,12 @@ function renderStudents(students) {
 }
 
 // Функція для отримання всіх студентів
-function getStudents() {
-    return fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students")
+const getStudents = async() => {
+    try {
+        return await fetch("https://68a180f86f8c17b8f5da0043.mockapi.io/students/students")
+    }catch(error) {
+        return error
+    }
 }
 
 getStudentsBtn.addEventListener("click", (event) => {
